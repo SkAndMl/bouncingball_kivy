@@ -1,0 +1,54 @@
+MainWidget:
+
+<MainWidget>:
+    Button:
+        text : root.game_button
+        pos_hint : {"x": None, "y": None}
+        pos : 15, 10
+        size : 125,75
+        background_color : 1, 0, 0, 1
+        on_press : root.bg_sound()
+        on_release : root.start_game()
+        id : btn
+        font_name : "fonts/Eurostile.ttf"
+        font_size : 22
+
+    Label:
+        id : lbl
+        opacity : 0
+        text : "G  A  M  E   O  V  E  R"
+        color : 0, 1, 1, 0.7
+        font_size : 30
+        font_name : "fonts/Sackers-Gothic-Std-Light.ttf"
+
+    Label:
+        id : lblscore
+        size : 20, 20
+        text : "SCORE: "+str(root.score)
+        font_name : "fonts/Eurostile.ttf"
+        font_size : 22
+
+    Label:
+        id : lblHscore
+        size : 20, 20
+        text : "HIGHEST: "+str(root.highscore)
+        font_name : "fonts/Eurostile.ttf"
+        font_size : 22   
+
+    Label:
+        id : lblgover
+        opacity : 0
+        color : 0, 0.5, 1, 0.8
+        font_size : 30
+        font_name : "fonts/Sackers-Gothic-Std-Light.ttf"
+
+    Button:
+        id : btnrestartgame
+        text : "RESTART GAME"
+        opacity : 0
+        background_color : 1, 0, 0, 1
+        size : 125,75    
+        on_release : root.game_reset()
+
+
+
